@@ -23,4 +23,5 @@ ENV PLATFORM linux-x86_64
 RUN ./install-pyrun --log --platform=linux-x86_64 --disable-certificate-checks ./
 #RUN ./install-pyrun --platform=linux-x86_64 --pyrun-distribution=egenix-pyrun-2.0.1-py2.7_ucs2-linux-x86_64.tar ./
 
-RUN export PATH=/opt/python/bin:$PATH
+ENV PATH /opt/python/bin:$PATH
+#RUN export PATH=/opt/python/bin:$PATH
