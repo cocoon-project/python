@@ -2,11 +2,20 @@ FROM debian:wheezy
 MAINTAINER cocoon 
 
 
-#
-# Python Dockerfile
-#
-# https://github.com/dockerfile/python
-#
+
+
+RUN apt-get update 
+
+
+# install git
+RUN apt-get install -yq git-core 
+
+
+# install vim
+RUN apt-get install -yq vim
+ADD files/vimrc /.vimrc
+
+
 
 # Install Python.
 RUN \
@@ -16,6 +25,11 @@ RUN \
 
 # Define working directory.
 WORKDIR /data
+
+
+
+
+
 
 # Define default command.
 CMD ["bash"]

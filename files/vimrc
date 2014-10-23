@@ -1,0 +1,7 @@
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+syntax on                           " syntax highlighing
+filetype on                          " try to detect filetypes
+filetype plugin indent on    " enable loading indent file for filetype
